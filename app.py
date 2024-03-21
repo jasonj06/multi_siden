@@ -5,7 +5,7 @@ from flask import Flask, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 # A view
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def sitemap():
     return render_template('home.html')
 
@@ -19,7 +19,7 @@ def add():
         b = request.form['b']
         c = int(a)+int(b)
 
-    return render_template('add.html', result=c, a1=a, b1=b)
+    return render_template('add.html', result=c, a1=a, b1=b)                            
 
 
 if __name__ == "__main__":

@@ -1,16 +1,28 @@
 <!doctype html>
 <html>
 <head>
+<style>
+/* Define the font-face */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('\static\MadimiOne-Regular.ttf') format('truetype'); /* Replace 'path/to/font-file.ttf' with the actual path to your font file */
+}
+
+/* Apply the custom font to specific elements */
+.custom-font-text {
+  font-family: 'CustomFont', sans-serif; /* Fallback to a generic sans-serif font if the custom font is not available */
+}
+</style>
 <title>Homescreen</title>
 <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 <h1>Velkommen!</h1>
 <form method="post">
-    <input type="submit" value="BMI beregner">
-    <input type="submit" value="Enhedsomregner">
-    <input type="submit" value="Volumen beregner">
-    <input type="submit" value="Text utility">
+    <input type="submit" value="BMI beregner"><br><br>
+    <input type="submit" value="Enhedsomregner"><br><br>
+    <input type="submit" value="Volumen beregner"><br><br>
+    <input type="submit" value="Text utility"><br><br>
   </form>
 </body>
 </html>
