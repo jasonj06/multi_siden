@@ -7,7 +7,7 @@ app = Flask(__name__)
 # A view
 @app.route("/")
 def root():
-    return redirect(url_for('add'))
+    return render_template('home.html')
 
 @app.route("/add", methods=['GET', 'POST'])
 def add():
