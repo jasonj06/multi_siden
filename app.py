@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 # A view
 @app.route("/")
-def root():
+def sitemap():
     return render_template('home.html')
 
 @app.route("/add", methods=['GET', 'POST'])
-def add():
+def add():  
     a = 0
     b = 0
     c = None
