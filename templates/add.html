@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+  <label for="a">a</label>
+  <input type="text" id="a" name="a" value={{ a1 }}><br><br>
+  <label for="b">b</label>
+  <input type="text" id="b" name="b" value={{ b1 }}><br><br>
+  <input type="submit" value="Calculate a+b">
+</form>
+
+{% if result %}
+{% if result > 0 %}
+<p>Result: <span class="positive">{{ result }}</span></p>
+{% elif result == 0 %}
+<p>Result: {{ result }}</p>
+{% else %}
+<p>Result: <span class="negative">{{ result }}</span></p>
+{% endif %}
+{% endif %}
+
+{% endblock %}
