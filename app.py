@@ -18,12 +18,19 @@ def add():
         a = request.form['a']
         b = request.form['b']
         c = int(a)+int(b)
-        
+
     return render_template('add.html', result=c, a1=a, b1=b) 
 
 @app.route('/bmi_beregner', methods=['GET', 'POST'])
 def bmi_beregner():
-    return render_template('bmi_beregner.html')
+    v = 0
+    h = 0
+    r = None
+    if request.method == 'POST':
+        v = request.form['v']
+        h = request.form['h']
+        r = float(v)/float(h)**2
+    return render_template('bmi_beregner.html', result=r, v=v, h=h )
                        
 
 
