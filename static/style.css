@@ -2,15 +2,39 @@
 
 .negative { color: #dd1111;}
 
-body {
-    font-family: Helvetica, sans-serif;
-}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  /* Hover effect */
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Active effect */
+  .button:active {
+    background-color: #3e8e41;
+  }
 
 h1 { 
-    text-decoration-color: #005526;
+    color: #005526;
     font-size: 48px;
 }
 
 h6 {
-    text-decoration-color: #c90000;
+    color: #c90000;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
 }
