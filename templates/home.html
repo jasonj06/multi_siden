@@ -1,26 +1,10 @@
-<!doctype html>
-<html>
-<head>
-<style>
-/* Define the font-face */
-@font-face {
-  font-family: 'CustomFont';
-  src: url('\static\MadimiOne-Regular.ttf') format('truetype'); /* Replace 'path/to/font-file.ttf' with the actual path to your font file */
-}
+{% extends "base.html" %}
 
-/* Apply the custom font to specific elements */
-.custom-font-text {
-  font-family: 'CustomFont', sans-serif; /* Fallback to a generic sans-serif font if the custom font is not available */
-}
-</style>
-<title>Homescreen</title>
-<link rel="stylesheet" href="static/style.css">
-</head>
-<body>
-<h1>Velkommen!</h1>
+{% block content %}
+<h2>Velkommen!</h2>
 <a href="bmi_beregner">BMI beregner</a><br><br>
 <a href="enhedsomregner">Enhedsomregner</a><br><br>
 <a href="volumen beregner">Volumen beregner</a><br><br>
 <a href="text_utility">Text utility</a><br>
-</body>
-</html>
+
+{% endblock %}
