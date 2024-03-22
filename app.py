@@ -18,8 +18,13 @@ def add():
         a = request.form['a']
         b = request.form['b']
         c = int(a)+int(b)
+        
+    return render_template('add.html', result=c, a1=a, b1=b) 
 
-    return render_template('add.html', result=c, a1=a, b1=b)                            
+@app.route('/bmi_beregner', methods=['GET', 'POST'])
+def bmi_beregner():
+    return render_template('bmi_beregner.html')
+                       
 
 
 if __name__ == "__main__":
