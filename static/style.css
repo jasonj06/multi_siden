@@ -6,5 +6,8 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
-h1 { text-decoration-color: #1b005a;}
+h1 { 
+    text-decoration-color: #005526;
+    font-size: 48px;
+}
 
