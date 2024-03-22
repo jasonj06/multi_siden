@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>BMI beregneren</h3>
+<h2>BMI beregneren</h2>
 <h6>OBS! Brug punktum istedet for komma.</h6>
 <form method="post">
     <label for="v">Vægt i kg</label>
     <input type="text" id="v" name="v" value={{ v }}><br><br>
     <label for="h">Højde i meter</label>
     <input type="text" id="h" name="h" value={{ h }}><br><br>
-    <input type="submit" value="Regn dit BMI">
+    <input class="button" type="submit" value="Regn dit BMI">
   </form>
 
 
-  <p>Result: {{ result }}</p>
-
+  <p>BMI: {{ result }}</p>
+<img src="static/bmi_skala.jpg" alt="bmi_skala" width="500">
 {% endblock %}
