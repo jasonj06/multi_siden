@@ -31,7 +31,10 @@ def bmi_beregner():
         h = request.form['h']
         r = float(v)/float(h)**2
     return render_template('bmi_beregner.html', result=r, v=v, h=h )
-                       
+
+@app.route('/enhedsomregner')
+def enhedsomregner():
+    return render_template('enhedsomregner.html')
 
 
 if __name__ == "__main__":
