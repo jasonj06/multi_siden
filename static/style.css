@@ -2,6 +2,12 @@
 
 .negative { color: #dd1111;}
 
+.no-underlines {
+    text-decoration: none;
+    color: #000000;
+    font-size: 30px;
+}
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
