@@ -26,11 +26,17 @@ def bmi_beregner():
     v = 0
     h = 0
     r = None
+    error_ = None
     if request.method == 'POST':
         v = request.form['v']
         h = request.form['h']
-        r = float(v)/float(h)**2
-    return render_template('bmi_beregner.html', result=r, v=v, h=h )
+        try:
+            r = float(v)/float(h)**2
+        except:
+            h = 1.75
+            r = float(v)/float(h)**2
+            error_ = True
+    return render_template('bmi_beregner.html', result=r, v=v, h=h, error_=error_ )
 
 @app.route('/enhedsomregner')
 def enhedsomregner():
