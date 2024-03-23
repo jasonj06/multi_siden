@@ -1,4 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Enhedsomregner</h2>
+<form action="/submit-form" method="post">
+    <label for="enheder">Vælg din enhed:</label>
+    <select id="enheder" name="enheder">
+      <option value="mm">mm</option>
+      <option valie="cm">cm</option>
+      <option value="m">m</option>
+      <option value="dm">dm</option>
+      <option value="km">km</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
 {% endblock %}
