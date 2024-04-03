@@ -42,6 +42,10 @@ def bmi_beregner():
 def enhedsomregner():
     return render_template('enhedsomregner.html')
 
+@app.route('/text_utility', methods=['GET', 'POST'])
+def text_utility():
+    return render_template('text_utility.html')
+
 
 if __name__ == "__main__":
     app.run("0.0.0.0", debug=True)
