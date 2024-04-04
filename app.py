@@ -35,10 +35,15 @@ def bmi_beregner():
         try:
             r = float(v)/float(h)**2
         except:
-            h = 1.75
-            r = float(v)/float(h)**2
-            error_ = True
-        
+            try:
+                float(v)
+                float(h)
+                h = 1.75
+                r = float(v)/float(h)**2
+                error_ = True
+            except:
+                error_ = True
+                
     if "last_bmi" not in session:
         last_bmi = r
         session['last_bmi'] = last_bmi

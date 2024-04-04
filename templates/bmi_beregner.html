@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2>BMI beregneren</h2>
-<h6>OBS! Brug punktum istedet for komma.</h6>
+<h6>OBS! Brug punktum i stedet for komma.</h6>
 <form method="post">
     <label for="v">Vægt i kg</label>
     <input type="text" id="v" name="v" value={{ v }}><br><br>
@@ -15,7 +15,7 @@
 <p>Sidste BMI: {{ last_bmi }}</p>
 
 {% if error_ == True %}
-<p><h6>Error. Height was automatically set to 1.75, height cannot be 0.</h6></p>
+<p><h6>Error. Height was automatically set to 1.75, height cannot be 0. Only use numbers.</h6></p>
 {% else %}
 <p> </p>
 {% endif %}
