@@ -11,7 +11,8 @@
     <input class="button" type="submit" value="Regn dit BMI">
   </form>
 
-  <p>BMI: {{ result }}</p>
+<p>BMI: {{ result }}</p>
+<p>Sidste BMI: {{ last_bmi }}</p>
 
 {% if error_ == True %}
 <p><h6>Error. Height was automatically set to 1.75, height cannot be 0.</h6></p>

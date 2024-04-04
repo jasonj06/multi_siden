@@ -1,8 +1,9 @@
 import random
 
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, session
 
 app = Flask(__name__)
+app.secret_key = '1234'
 
 # A view
 @app.route("/", methods=['GET', 'POST'])
@@ -27,6 +28,7 @@ def bmi_beregner():
     h = 0
     r = None
     error_ = None
+
     if request.method == 'POST':
         v = request.form['v']
         h = request.form['h']
@@ -36,7 +38,12 @@ def bmi_beregner():
             h = 1.75
             r = float(v)/float(h)**2
             error_ = True
-    return render_template('bmi_beregner.html', result=r, v=v, h=h, error_=error_ )
+        
+    if "last_bmi" not in session:
+        last_bmi = r
+        session['last_bmi'] = last_bmi
+
+    return render_template('bmi_beregner.html', result=r, v=v, h=h, error_=error_, last_bmi=session['last_bmi'])
 
 @app.route('/enhedsomregner')
 def enhedsomregner():
