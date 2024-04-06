@@ -1,5 +1,6 @@
 import random
-
+import requests
+import json
 from flask import Flask, request, render_template, redirect, url_for, session
 
 app = Flask(__name__)
@@ -58,9 +59,16 @@ def enhedsomregner():
 def text_utility():
     return render_template('text_utility.html')
 
+def get_meme():
+    url = "https://meme-api.com/gimme"
+    response = json.loads(requests.request("GET", url).text)
+    meme_large = response["preview"][-2]
+    return meme_large
+
 @app.route('/random_meme', methods=['GET'])
 def random_meme():
-    return render_template('random_meme.html')
+    meme_picture = get_meme()
+    return render_template('random_meme.html', meme_picture=meme_picture)
 
 
 if __name__ == "__main__":
