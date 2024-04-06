@@ -1,25 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>BMI beregneren</h2>
-<h6>OBS! Brug punktum i stedet for komma.</h6>
-<form method="post">
+<div>
+  <h2>BMI beregneren</h2>
+  <h6>OBS! Brug punktum i stedet for komma.</h6>
+</div>
+
+<div>
+  <form method="post">
     <label for="v">Vægt i kg</label>
     <input type="text" id="v" name="v" value={{ v }}><br><br>
+
     <label for="h">Højde i meter</label>
     <input type="text" id="h" name="h" value={{ h }}><br><br>
+
     <input class="button" type="submit" value="Regn dit BMI">
   </form>
+</div>
 
-<p>BMI: {{ result }}</p>
-<p>Sidste BMI: {{ last_bmi }}</p>
+<div>
+  <p>BMI: {{ result }}</p>
+  <p>Sidste BMI: {{ last_bmi }}</p>
+</div>
 
-{% if error_ == True %}
-<p><h6>Error. Height was automatically set to 1.75, height cannot be 0. Only use numbers.</h6></p>
-{% else %}
-<p> </p>
-{% endif %}
+<div>
+  {% if error_ == True %}
+  <p><h6>Error. Height was automatically set to 1.75, height cannot be 0. Only use numbers.</h6></p>
+  {% else %}
+  <p> </p>
+  {% endif %}
+</div>
 
-<img src="static/bmi_skala.jpg" alt="bmi_skala" width="500">
+<div>
+  <img src="static/bmi_skala.jpg" alt="bmi_skala" width="500">
+</div>
 
 {% endblock %}
