@@ -36,7 +36,8 @@
 
 h1 { 
     color: hsl(0, 0%, 0%);
-    font-size: 48px;
+    font-size: 60px;
+    margin-bottom: 0;
 }
 
 h6 {
@@ -54,12 +55,22 @@ body {
   height: 40px;
   font-size: 20px;
   cursor: pointer;
-  border-radius: 10px;
+  box-shadow: 10px 10px 5px #acacac;
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15px;
+  height: 35px;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#grad {
+  background-image: linear-gradient(180deg, #C7C7C7, rgb(139, 74, 129));
 }
