@@ -70,3 +70,21 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.meme_generator {
+  text-align: center;
+}
+
+.meme_generator img{
+  height: 430px;
+  object-fit: cover;
+}
+
+.meme_generator .generate_meme_btn {
+  font-size: large;
+  cursor: pointer;
+}
+
+.meme_generator .meme_author {
+  margin: 8px;
+}
