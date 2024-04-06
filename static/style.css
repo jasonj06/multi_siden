@@ -70,7 +70,3 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-#grad {
-  background-image: linear-gradient(180deg, #C7C7C7, rgb(139, 74, 129));
-}
