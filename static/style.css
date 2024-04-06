@@ -55,5 +55,11 @@ body {
   font-size: 20px;
   cursor: pointer;
   border-radius: 10px;
-  justify-self: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
 }
