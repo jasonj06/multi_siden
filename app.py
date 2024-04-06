@@ -58,6 +58,10 @@ def enhedsomregner():
 def text_utility():
     return render_template('text_utility.html')
 
+@app.route('/random_meme', methods=['GET'])
+def random_meme():
+    return render_template('random_meme.html')
+
 
 if __name__ == "__main__":
     app.run("0.0.0.0", debug=True)
