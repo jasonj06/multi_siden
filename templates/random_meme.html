@@ -10,7 +10,14 @@
     </a>
     <br><br>
     <img src="{{ meme_picture }}"/>
-    <div class="Meme forfatter"></div>
+    <div class="Meme credentials">
+        <p>
+            Subreddit: {{ meme_subreddit }}
+        </p>
+        <p>
+            Creator: {{ meme_author }}
+        </p>
+    </div>
 </div>
 
 {% endblock %}

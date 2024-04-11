@@ -63,12 +63,16 @@ def get_meme():
     url = "https://meme-api.com/gimme"
     response = json.loads(requests.request("GET", url).text)
     meme_large = response["preview"][-2]
-    return meme_large
+    subreddit = response["subreddit"]
+    author = response["author"]
+    return [meme_large, subreddit, author]
 
 @app.route('/random_meme', methods=['GET'])
 def random_meme():
-    meme_picture = get_meme()
-    return render_template('random_meme.html', meme_picture=meme_picture)
+    meme_picture = get_meme()[0]
+    meme_subreddit = get_meme()[1]
+    meme_author = get_meme()[2]
+    return render_template('random_meme.html', meme_picture=meme_picture, meme_subreddit=meme_subreddit, meme_author=meme_author)
 
 
 if __name__ == "__main__":
