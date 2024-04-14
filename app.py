@@ -9,7 +9,7 @@ app.secret_key = '1234'
 # A view
 @app.route("/", methods=['GET', 'POST'])
 def sitemap():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route("/add", methods=['GET', 'POST'])
 def add():  
